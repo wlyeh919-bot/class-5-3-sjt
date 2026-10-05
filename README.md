@@ -8,9 +8,6 @@
 
 教師自由回應、動態追問、共同背景資訊與孩子模擬反應分開記錄。結果保存三題首次及新資訊後回應，也能匯出 JSON；不合成能力總分。情緒引導與回到課堂的起步動作會保留到後續教學。
 
-## 首次啟用 GitHub Pages
-
-請到 [Settings → Pages](https://github.com/wlyeh919-bot/class-5-3-sjt/settings/pages)，選擇 **Deploy from a branch**、**main**、**/(root)**，再按 **Save**。GitHub 完成部署後，展示入口即可使用；之後推送 `main` 會自動更新。
 
 ## 使用與部署
 
