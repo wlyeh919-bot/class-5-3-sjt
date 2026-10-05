@@ -1,12 +1,16 @@
 # 五年三班｜互動式情境體驗
 
-展示入口：https://wlyeh919-bot.github.io/class-5-3-sjt/
+展示入口（首次啟用 Pages 後可用）：https://wlyeh919-bot.github.io/class-5-3-sjt/
 
 目前版本：`CLASS5-REFERENCE-REBASE-20261004.13`。
 
 你是五年三班的導師，從數學課小組競賽後的疑問，經過數日後的課堂與學習單、校內交流，再進入放學後的親師通話。角色、環境與對話保留互動及動態；可暫停動態，也尊重系統的減弱動態設定。
 
 教師自由回應、動態追問、共同背景資訊與孩子模擬反應分開記錄。結果保存三題首次及新資訊後回應，也能匯出 JSON；不合成能力總分。情緒引導與回到課堂的起步動作會保留到後續教學。
+
+## 首次啟用 GitHub Pages
+
+請到 [Settings → Pages](https://github.com/wlyeh919-bot/class-5-3-sjt/settings/pages)，選擇 **Deploy from a branch**、**main**、**/(root)**，再按 **Save**。GitHub 完成部署後，展示入口即可使用；之後推送 `main` 會自動更新。
 
 ## 使用與部署
 
