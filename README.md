@@ -1,6 +1,6 @@
 # 五年三班｜互動式情境體驗
 
-展示入口（首次啟用 Pages 後可用）：https://wlyeh919-bot.github.io/class-5-3-sjt/
+展示入口：https://wlyeh919-bot.github.io/class-5-3-sjt/
 
 目前版本：`CLASS5-REFERENCE-REBASE-20261004.13`。
 
