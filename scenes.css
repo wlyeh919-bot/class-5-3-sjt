@@ -1,0 +1,50 @@
+/* Camera cuts and set dressing follow the current event, never future story beats. */
+.scene-location{position:absolute;left:12px;bottom:56px;z-index:22;background:#fff7e5ca;border:1px solid #c5b29480;border-radius:8px;padding:5px 9px;color:#635b48;font-size:11px;pointer-events:none}
+#corridorBackground,#deskBackground,#lessonBoard,#corridorLife,#deskLife{display:none}
+.stage[data-setting="classroom-lesson"] #scoreBoard{display:none}
+.stage[data-setting="classroom-lesson"] #lessonBoard{display:block}
+.stage[data-setting="classroom-lesson"] .sunbeam{opacity:.04}
+.stage[data-setting="classroom-lesson"] #dateCaption{display:block}
+.stage:is([data-setting="desk"],[data-setting="desk-recess"]) #classroomBackground,.stage:is([data-setting="desk"],[data-setting="desk-recess"]) #scoreBoard,.stage:is([data-setting="desk"],[data-setting="desk-recess"]) #lessonBoard,.stage:is([data-setting="desk"],[data-setting="desk-recess"]) #bookcaseHotspot,.stage:is([data-setting="desk"],[data-setting="desk-recess"]) #plantHotspot,.stage:is([data-setting="desk"],[data-setting="desk-recess"]) #curtainHotspot,.stage:is([data-setting="desk"],[data-setting="desk-recess"]) #clock,.stage:is([data-setting="desk"],[data-setting="desk-recess"]) #bagHotspot,.stage:is([data-setting="desk"],[data-setting="desk-recess"]) .peer-hotspot,.stage:is([data-setting="desk"],[data-setting="desk-recess"]) #eraserRig,.stage:is([data-setting="desk"],[data-setting="desk-recess"]) #paperPlane,.stage:is([data-setting="desk"],[data-setting="desk-recess"]) #windowBirdRig{display:none}
+.stage:is([data-setting="desk"],[data-setting="desk-recess"]) #deskBackground,.stage:is([data-setting="desk"],[data-setting="desk-recess"]) #deskLife{display:block}
+.stage:is([data-setting="desk"],[data-setting="desk-recess"]) #teacherHotspot{transform:translate(350px,450px) scale(1.3)}
+.stage:is([data-setting="desk"],[data-setting="desk-recess"]) #zianHotspot{transform:translate(800px,465px) scale(1.6)}
+.stage:is([data-setting="desk"],[data-setting="desk-recess"]) .student-desk,.stage:is([data-setting="desk"],[data-setting="desk-recess"]) .leg{display:none!important}
+.stage:is([data-setting="desk"],[data-setting="desk-recess"]) #teacher .held-book{display:none}
+.stage:is([data-setting="desk"],[data-setting="desk-recess"]) .narration-card{width:38%!important;max-height:34%}
+.stage[data-setting="corridor"] #classroomBackground,.stage[data-setting="corridor"] #scoreBoard,.stage[data-setting="corridor"] #lessonBoard,.stage[data-setting="corridor"] #bookcaseHotspot,.stage[data-setting="corridor"] #plantHotspot,.stage[data-setting="corridor"] #curtainHotspot,.stage[data-setting="corridor"] #clock,.stage[data-setting="corridor"] #bagHotspot,.stage[data-setting="corridor"] .peer-hotspot,.stage[data-setting="corridor"] #zianHotspot,.stage[data-setting="corridor"] #eraserRig,.stage[data-setting="corridor"] #paperPlane,.stage[data-setting="corridor"] #windowBirdRig{display:none}
+.stage[data-setting="corridor"] #corridorBackground,.stage[data-setting="corridor"] #corridorLife{display:block}
+.stage[data-setting="corridor"] #teacherHotspot{transform:translate(480px,570px) scale(1.1)}
+.stage[data-setting="corridor"] #subjectTeacherHotspot{transform:translate(800px,570px) scale(1.1);opacity:1!important}
+.stage[data-setting="corridor"] #subjectTeacherActor{animation:colleagueEnter .75s ease-out both}
+.stage[data-setting="corridor"] .narration-card{width:42%!important;max-height:34%}
+.scene-only.hidden{display:none!important}
+#corridorLeaves{transform-box:fill-box;transform-origin:center;animation:corridorBreeze 5s ease-in-out infinite}
+#corridorNote{transform-box:fill-box;transform-origin:center top;animation:noteCorner 6s ease-in-out infinite}
+#deskPencil{transform-box:fill-box;transform-origin:70% center}
+#deskPaperCorner{transform-box:fill-box;transform-origin:right bottom;animation:paperCorner 7s ease-in-out infinite}
+.office-life{position:absolute;left:3%;bottom:8%;z-index:1;display:flex;gap:14px;align-items:end;pointer-events:none}
+.office-life .mug{width:40px;height:35px;border:3px solid #7d7c65;border-radius:5px 5px 13px 13px;background:#edf1dcbe;position:relative}
+.office-life .mug:after{content:"";position:absolute;right:-15px;top:4px;width:12px;height:15px;border:3px solid #7d7c65;border-radius:0 10px 10px 0}
+.office-life .steam{position:absolute;top:-23px;left:10px;font-size:25px;color:#ffffffb3;animation:teaSteam 3.2s ease-in-out infinite}
+.office-life .office-note{font-size:12px;line-height:1.6;transform:rotate(-5deg);background:#fff0b9;padding:11px 13px;color:#75654e;border:1px solid #c5af7c;animation:noteCorner 8s ease-in-out infinite;transform-origin:center top}
+.stage.scene-finished .office-life{display:none}
+.stage.motion-paused *, .stage.scene-finished *{animation-play-state:paused!important}
+@keyframes corridorBreeze{0%,100%{transform:translate(0,0) rotate(0)}50%{transform:translate(-8px,4px) rotate(-3deg)}}
+@keyframes noteCorner{0%,76%,100%{rotate:0deg}83%{rotate:-3deg}91%{rotate:2deg}}
+@keyframes paperCorner{0%,75%,100%{transform:scaleY(1)}86%{transform:scaleY(.82) rotate(-2deg)}}
+@keyframes teaSteam{0%{transform:translateY(3px);opacity:.1}50%{opacity:.7}100%{transform:translateY(-16px);opacity:0}}
+@media(max-width:860px) and (orientation:portrait){.scene-location{left:8px;bottom:43px;font-size:9px;padding:3px 6px}.stage:is([data-setting="desk"],[data-setting="desk-recess"]) .narration-card{width:44%!important;font-size:9px}.stage[data-setting="corridor"] .narration-card{width:51%!important;font-size:9px}.office-life{bottom:9%;left:2%;opacity:.8}.office-life .office-note{font-size:8px;padding:6px}.office-life .mug{width:23px;height:21px}.stage[data-setting="office"] .scene-location{bottom:5px}}
+@media(max-height:460px) and (orientation:landscape){.scene-location{font-size:9px;bottom:46px}.stage:is([data-setting="desk"],[data-setting="desk-recess"]) .narration-card{font-size:9px}.office-life .office-note{font-size:9px;padding:7px}}
+@media(prefers-reduced-motion:reduce){#corridorLeaves,#corridorNote,#deskPaperCorner,.office-life *{animation:none!important}}
+.scene-arrival #world>image{animation:shotAppear .45s ease-out both}@keyframes shotAppear{from{opacity:.35}to{opacity:1}}
+.stage:is([data-setting="desk"],[data-setting="desk-recess"]) .human-name{display:none}
+
+.stage:is([data-setting="desk"],[data-setting="desk-recess"]) .actor-frame{clip-path:url(#deskEdgeClip)}
+
+.stage[data-setting="desk-recess"] #deskLife text{display:none}
+.show-results .stage[data-setting="office"] #world{display:none}.show-results .stage[data-setting="office"] .call-stage{display:block}.show-results .stage[data-setting="office"] .call-phone,.show-results .stage[data-setting="office"] .call-person{display:none}
+/* Keep the close-up's scene note clear of the speaking child's bubble. */
+.stage:is([data-setting="desk"],[data-setting="desk-recess"]) .narration-card{left:12px!important;right:auto!important;top:auto!important;bottom:93px;width:35%!important;max-height:30%}
+@media(max-width:860px) and (orientation:portrait){.stage:is([data-setting="desk"],[data-setting="desk-recess"]) .narration-card{left:8px!important;bottom:80px;width:43%!important}}
+@media(max-width:860px) and (orientation:portrait) and (max-height:700px){.stage:is([data-setting="desk"],[data-setting="desk-recess"]) .narration-card{display:none}}

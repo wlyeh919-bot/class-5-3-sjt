@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+/_site/
+/tests/fixtures/*.json
+/docs/本版驗證結果.json
+/docs/版本*驗證結果.json

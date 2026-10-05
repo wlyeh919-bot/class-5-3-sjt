@@ -1,0 +1,110 @@
+/* Articulated gestures, responsive two-party call and a lighter watercolor overlay. */
+.stage .dialogue{background:rgba(255,253,246,.62)!important;backdrop-filter:blur(1px)!important;-webkit-backdrop-filter:blur(1px)!important}
+.stage .narration-card{background:rgba(255,248,232,.72)!important}
+.human-actor .arm-left{animation:restingHand 8s ease-in-out infinite;transform-box:fill-box;transform-origin:25% 8%}
+#peerB .arm-left{animation-delay:-2s}#peerC .arm-left{animation-delay:-4s}#peerD .arm-left{animation-delay:-6s}
+.human-actor.reaching .arm-left{animation:listeningHand 1.4s ease-in-out}
+#colleagueNotebookPage{transform-box:fill-box;transform-origin:left center}
+#deskEraser{transform-box:fill-box;transform-origin:center}
+#childExercise{display:none}#childExerciseCover{transform-box:fill-box;transform-origin:left center}
+.stage[data-setting="classroom-lesson"] #childExercise{display:block}
+#childExercise.paper-open #childExerciseCover{transform:scaleX(.06)}
+.colleague-next{margin-top:auto;font-size:12px;min-height:38px;flex-shrink:0}
+.colleague-options[open]{max-height:180px;overflow:auto}
+.stage[data-setting="corridor"] .narration-card{left:12px!important;right:auto!important;top:auto!important;bottom:95px;width:32%!important;font-size:12px}
+.call-stage::before{background:linear-gradient(180deg,#fffbe818,#fff8eb42)!important}
+.stage .call-person{display:flex!important;opacity:1;top:50%;bottom:auto;transform:translateY(-50%);width:22%;min-width:0;gap:5px;z-index:9}
+.stage .call-person.teacher-side{left:1.5%}.stage .call-person.parent-side{right:1.5%}
+.stage .call-avatar{width:90%;height:auto;aspect-ratio:1;min-width:0;min-height:0;overflow:hidden;background:rgba(255,250,234,.66);border:3px solid #778f8380;padding:7%;transition:border-color .25s,box-shadow .25s;position:relative}
+.call-avatar-button{cursor:pointer;font:inherit;color:inherit}
+.call-avatar-button:focus-visible{outline:3px solid #bc7755;outline-offset:4px}
+.stage .call-avatar svg{width:100%;height:100%;transform-origin:center 70%}
+.call-person .call-person-name{font-size:clamp(11px,1.3vw,18px);background:#fff9eac9;white-space:nowrap}
+.call-status{font-size:11px;color:#567065;background:#fff8e8b0;border-radius:99px;padding:3px 8px;white-space:nowrap}
+.call-person.active-speaker .call-avatar{border-color:#497b69;box-shadow:0 0 0 6px #72a28935,0 8px 20px #59482920}
+.call-person.active-speaker .call-status{background:#dcecdf;color:#315f4a}
+.call-avatar .eye,.call-avatar .call-eye{transform-box:fill-box;transform-origin:center;animation:humanBlink 6.4s infinite}
+.parent-side .call-eye{animation-delay:-3s}
+.teacher-side.active-speaker .mouth{visibility:hidden}.teacher-side .talk-mouth{display:none}
+.teacher-side.active-speaker .talk-mouth{display:block;transform-box:fill-box;transform-origin:center;animation:humanTalk .25s ease-in-out infinite alternate}
+.parent-side.active-speaker .call-parent-mouth{transform-box:fill-box;transform-origin:center;animation:parentSpeaking .28s ease-in-out infinite alternate}
+.stage .call-person .phone-prop{width:30px;height:50px;right:3%;bottom:24%;border-width:3px;z-index:2;pointer-events:none}
+.stage .parent-side .phone-prop{left:3%;right:auto}
+.stage .call-phone{width:50%!important;top:52%!important;height:80%;border:5px solid #5e7970;border-radius:26px;background:rgba(255,253,246,.65);padding:26px 12px 12px;box-shadow:0 9px 27px #3e4e3920}
+.call-phone:active{transform:translate(-50%,-50%)}
+.call-msg.parent{background:rgba(237,224,204,.72)}.call-msg.teacher{background:rgba(211,231,222,.78)}
+.call-msg{max-width:96%;font-size:clamp(11px,1.1vw,16px)}
+.call-phone-header{align-items:flex-start;font-size:10px}.call-phone-header strong{font-size:13px}
+.call-live{font-size:9px}.office-life{left:7%;bottom:9%;z-index:2;opacity:1}
+.office-life .mug{width:48px;height:40px}.office-life .steam{font-size:31px;top:-29px;left:12px}
+.office-life .office-note{display:none}
+.stage.phone-scene .scene-play{display:flex}.stage.phone-scene .scene-play .scene-only.hidden{display:none!important}
+.stage[data-setting="office"] .scene-location{left:auto;right:12px;bottom:12px}
+@keyframes restingHand{0%,64%,100%{rotate:0deg}73%{rotate:-9deg}82%{rotate:4deg}}
+@keyframes listeningHand{0%,100%{rotate:0deg}40%{rotate:18deg}65%{rotate:10deg}}
+@keyframes parentSpeaking{from{transform:scaleY(.65)}to{transform:scaleY(1.2)}}
+@media(max-width:860px) and (orientation:portrait){
+ .stage .call-person{width:23%;top:49%;gap:3px}.stage .call-avatar{width:94%;border-width:2px;padding:4%}
+ .call-person .call-person-name{font-size:10px;padding:3px 6px}.call-status{font-size:8px;padding:2px 5px}
+ .stage .call-phone{width:49%!important;top:52%!important;height:73%;padding:18px 5px 6px;border-width:3px;border-radius:18px}
+ .call-phone::before{width:37px;height:4px;top:7px}.call-phone-header strong{font-size:10px}.call-phone-header>span,.call-live{display:none}
+ .call-phone-header{padding:0 2px 5px}.call-history{padding:7px 1px;gap:6px}.call-msg{font-size:10px;padding:6px;line-height:1.6}.call-msg small{font-size:8px}
+ .stage .call-person .phone-prop{width:19px;height:31px;border-width:2px;bottom:30%}.phone-prop::after{width:9px;height:2px}
+ .stage[data-setting="office"] .scene-location{right:7px;bottom:41px;font-size:8px}.office-life{left:7%;bottom:12%}.office-life .mug{width:23px;height:23px}.office-life .steam{font-size:21px;top:-20px;left:4px}
+ .stage[data-setting="corridor"] .narration-card{left:8px!important;bottom:75px;width:38%!important;font-size:9px;padding:6px}
+ .scene-play{gap:4px}.scene-play button{padding-inline:7px}.colleague-options[open]{max-height:125px}
+}
+@media(max-height:700px) and (max-width:860px) and (orientation:portrait){.stage[data-setting="corridor"] .narration-card{display:none}}
+@media(max-height:460px) and (orientation:landscape){.stage .call-person{width:21%;top:53%}.stage .call-avatar{width:80%}.call-status{font-size:8px}.stage .call-phone{padding:20px 7px 7px;height:81%}.call-msg{font-size:10px}.call-live{display:none}.office-life .mug{width:23px;height:23px}.call-person .call-person-name{font-size:10px}.stage[data-setting="corridor"] .narration-card{font-size:9px;padding:6px;width:30%!important}}
+@media(prefers-reduced-motion:reduce){.stage .human-actor *,.call-avatar *{animation:none!important;transition:none!important}.teacher-side.active-speaker .mouth{visibility:visible}.teacher-side.active-speaker .talk-mouth{display:none}}
+
+.call-avatar-button{pointer-events:auto!important}
+.show-results .stage[data-setting="office"] .call-person,.show-results .stage .scene-play{display:none!important}
+
+/* Cup lip contact uses the same point as the animation transform origin. */
+.office-life .mug{transform-origin:40% 0%}.sip-contact{position:absolute;left:40%;top:0;width:0;height:0;pointer-events:none}
+#teacherSipArm{display:none}.is-drinking #teacherSipArm{display:block}.is-drinking .arm-left,.is-drinking .mouth,.is-drinking .talk-mouth{visibility:hidden}
+.worksheet-task{display:flex;align-items:center;gap:10px}.worksheet-task p{margin:4px 0;font-size:clamp(12px,1.1vw,16px)}.worksheet-symbol{width:70px;height:64px;flex:none}.worksheet-card{padding:8px 12px}#worksheetInk{display:none;fill:none;stroke:#b47654;stroke-width:2.5}#worksheetInk.marked{display:block}
+.stage[data-setting="desk-recess"] #worksheetDrawing{display:none}
+@media(max-height:650px){.worksheet-symbol{width:44px;height:38px}.worksheet-card{padding:5px 9px}.worksheet-task p{font-size:12px}}
+@media(max-height:460px) and (orientation:landscape){
+ .learning-active .worksheet-task p,.learning-active .learning-progress{display:none}
+ .learning-active .worksheet-symbol{width:32px;height:27px}.learning-active .worksheet-task strong{font-size:13px}
+ .learning-active .response-dock textarea{flex:none;height:45px}
+ .learning-active .learning-tools[open]{position:static;padding:3px;margin:0}
+ .learning-active .learning-tools .chip{min-height:28px;font-size:11px;padding:4px 6px}
+}
+/* Raised cup remains in front of the avatar while the same cup travels from the desk. */
+.office-life{z-index:12}.is-drinking~.office-life .steam{visibility:hidden}
+
+.office-life .mug.at-mouth .steam{visibility:hidden}
+
+#worksheetDrawing{display:none}#worksheetDrawing.shown{display:block}
+
+#worksheetDrawing .bar-fill,#worksheetDrawing .eighth-splits{display:none}#worksheetDrawing.has-model .bar-fill,#worksheetDrawing.has-model .eighth-splits{display:block}
+
+/* Clearly separate the player's teaching role from the pupil's worksheet. */
+.stage .narration-card{color:#202722;font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;font-weight:750;line-height:1.65}
+.stage .narration-card .kicker{font-weight:850}.worksheet-card>strong{display:block;font-size:16px;color:#283d35}.worksheet-card>p{font-size:12px;line-height:1.45;margin:3px 0 0}
+.learning-tools summary{font-size:11px;padding:3px 0}.learning-tools .mini-row{display:flex;flex-wrap:nowrap;gap:5px;margin-top:2px}.learning-tools .chip{flex:1;min-width:0;min-height:32px;padding:5px 6px;font-size:12px;white-space:nowrap}
+.phone-cat{position:absolute;width:clamp(68px,12%,118px);aspect-ratio:132/78;z-index:16;padding:0;border:0;background:none;cursor:pointer;touch-action:manipulation;filter:drop-shadow(0 2px 1px #4e453222)}
+.phone-cat svg{width:100%;height:100%;display:block;overflow:visible}.phone-cat:focus-visible{outline:2px solid #856e53;outline-offset:3px;border-radius:15px}
+.cat-head{transform-origin:89px 35px;transition:transform .35s ease}.cat-pupils{transition:transform .35s ease}.cat-tail{transform-origin:20px 54px}
+.phone-cat[data-look="teacher"] .cat-head{transform:rotate(-9deg)}.phone-cat[data-look="teacher"] .cat-pupils{transform:translateX(-3px)}
+.phone-cat[data-look="parent"] .cat-head{transform:rotate(9deg)}.phone-cat[data-look="parent"] .cat-pupils{transform:translateX(3px)}
+.cat-eyes{transform-origin:89px 32px;animation:catBlink 7.3s infinite}.phone-cat .cat-paw{transform-origin:65px 56px}
+@keyframes catBlink{0%,92%,97%,100%{transform:scaleY(1)}94%,95%{transform:scaleY(.12)}}
+.show-results .phone-cat{display:none}
+@media(max-height:650px){.worksheet-card>strong{font-size:14px}.worksheet-card>p{font-size:11px}}
+@media(max-height:460px) and (orientation:landscape){.learning-active .worksheet-card>small{display:none}.worksheet-card>p{font-size:10px}.learning-tools .chip{min-height:28px;font-size:11px}.stage .narration-card{line-height:1.45}}
+@media(prefers-reduced-motion:reduce){.cat-head,.cat-pupils{transition:none}.cat-eyes{animation:none}}
+
+.stage.motion-paused .cat-head,.stage.motion-paused .cat-pupils{transition:none}
+.show-results .phone-cat *{animation:none}
+/* S166: the child turns toward one manageable piece of the current lesson. */
+.reentry-paper{display:none;position:absolute;left:53%;bottom:12%;width:22%;max-width:220px;padding:9px 12px;background:#fff9e6;border:1px solid #b9a383;box-shadow:2px 4px 8px #66543735;transform:rotate(-3deg);z-index:9;pointer-events:none}.reentry-paper.show{display:block}.reentry-paper small{font-size:11px;color:#615c4b;font-weight:700}.reentry-paper svg{width:100%;display:block;fill:#455b50;font:20px sans-serif}.reentry-paper .reentry-reason{font-size:12px}.reentry-circles{fill:none;stroke:#769082;stroke-width:2.4;visibility:hidden}.circled .reentry-circles{visibility:visible;stroke-dasharray:150;stroke-dashoffset:0}.stage[data-attention="worksheet"] #zian .head{rotate:5deg}.stage[data-regulation="easing"] #zian .brow{opacity:.7}
+@media(max-width:760px){.reentry-paper{left:53%;bottom:10%;width:27%;padding:5px 7px}.reentry-paper small{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.reentry-paper{transition:none}}
+.reentry-outline{fill:none;stroke:#769082;stroke-width:1.7;visibility:hidden}.outlined .reentry-outline{visibility:visible}.reentry-paper.taking-pen::after{content:'';position:absolute;width:5px;height:55%;right:4%;top:20%;background:#d9a248;border:1px solid #8c6c3d;border-radius:2px;rotate:18deg}.stage[data-attention="worksheet"] #zian .held-pencil{opacity:1}.guidance-evidence{margin:18px 0;padding:12px 15px;border:1px solid #c5bdac;border-radius:12px}.guidance-evidence summary{font-weight:700;cursor:pointer}.guidance-evidence p{font-size:14px;color:#59685b}
+#deskReentryMarks{fill:none;stroke:#729381;stroke-width:2}
+.stage.behavior-scene #zian .held-pencil{opacity:0}.stage.behavior-scene[data-pen-held="true"] #zian .held-pencil{opacity:1}

@@ -1,0 +1,28 @@
+{
+  "version": "CLASS5-REFERENCE-REBASE-20261004.13",
+  "release_date": "2026-10-05",
+  "files": {
+    "index.html": "d6f6cfaf496a5262de63a5a7d62ee3855b038d46a4da034bea81ed51de6ea5c4",
+    "reference.css": "a0707ccd6a7d232d9138f84fa32eebc6d06ad1c488790814532919d3bdb9dc35",
+    "rebase.css": "7486489bd8d59a529c7f6943f86efa36ec3ad1136f148289ae14ba4febdd37bb",
+    "fit.css": "a0d1742488f29c605c3ace31033c476809bc5381f9ff89890176c9cd6c89288a",
+    "scenes.css": "7c8a38bba4e862a36a7351357bf37d9cb0ce75bee7811387549708e17f16e892",
+    "refinement.css": "5dcc08207a5cbcd16696143a4564c7884036aa34a9872f3721ec505915099ba1",
+    "js/lexicon.js": "2bacad53ce6332157ff674c8dbd3400eb6176965916a405a3e3a9554d4fa41c5",
+    "js/evidence.js": "277d5658bfbbc5d0611e668e88de321e60d94e95b8290c915f3a94eac00f3394",
+    "js/teaching.js": "dabd3f99f1e250bc2df1e7bfbfd2d3d2d4aaf4cb65f54916e59e50fe61a0ff76",
+    "js/rebase-extensions.js": "438d09c03decb2bda96869b69ff9db2421ab7cd0c59c141d7fd74c08cb4e870c",
+    "js/guidance.js": "7b982f8f7f29b1e746ec0735a4e3a541222e69d4662a5ca16422ec8011ab2278",
+    "js/scenes.js": "1015b31e9a7e8cf92e6c9d256479290097d01c1b1bb6a0ab7487b9107549d6e5",
+    "js/refinement.js": "07eb845f79264cd929639521ccafcfc5a74756ffc913228336ce1700b037557b",
+    "js/worksheet.js": "182d5888ed48f681fca9d62c6a435901a55a89ec249e9fe6b0f3b85a35ab03ab",
+    "js/drink.js": "ce0653e799fe26135cfabe64653834b3ca38ae4c25406ea1a069b12b17afb35e",
+    "js/phone-cat.js": "87eaacf8870e4279226bcbde65595a1ddf645450ee039631dde8f1105bd70eb6",
+    "js/reference.js": "03e1916454638c77c01c4436c53fc33be3242f922a45978339bc547d5de345cf",
+    "assets/classroom.png": "c140aadf9d7d10b22beb7f60e79acf5d1346d08a13fb8e8e5bd6d0794efe947e",
+    "assets/corridor.png": "7c31ca895c44793d102342ee6cb67078700dc71c3028cec1d2795ae373327448",
+    "assets/desk.png": "7e5a330d35ac9568ac32abc16bf84baa78524fd130ed94b713e40256627ce537",
+    "assets/icon.svg": "6e1030e095bad2bdb2f75425c37ef0691ad186169887b026ed49a5aa12e3421d",
+    "assets/office.png": "aa2dc941743ec799646d2b756ed9c640d7c5b1d4485b62d110c709fde44ee9db"
+  }
+}
